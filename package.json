@@ -1,0 +1,32 @@
+{
+  "name": "connect-4-api",
+  "version": "1.0.0",
+  "description": "A clone of the classic game Connect 4. Using React to Create the application and ... (Come back to me...)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valkarie01/connect-4-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Valkarie01/connect-4-API/issues"
+  },
+  "homepage": "https://github.com/Valkarie01/connect-4-API#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.9.0",
+    "mongoose": "^6.5.3",
+    "passport": "^0.6.0",
+    "passport-http-bearer": "^1.0.1"
+  }
+}

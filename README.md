@@ -58,3 +58,5 @@ Node
 | Create Match | POST | /matches |
 | Update Match | PATCH | /matches/:id |
 | Delete Match | DELETE | /matches/:id |
+
+npm install bcrypt cors dotenv express jsonwebtoken method-override mongodb mongoose passport passport-http-bearer

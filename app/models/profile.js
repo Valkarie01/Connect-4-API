@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const matches = require('./matches')
+const Matches = require('./matches')
 
 const profileSchema = new mongoose.Schema(
 	{
@@ -8,7 +8,8 @@ const profileSchema = new mongoose.Schema(
 			required: true,
 		},
 		matches: {
-			ref: matches
+			type: Number,
+			ref: 'Matches',
 		},
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,

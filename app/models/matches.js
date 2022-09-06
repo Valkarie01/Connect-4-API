@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
-const profile = require('./profile')
+const Profile = require('./profile')
 
 const matchesSchema = new mongoose.Schema(
 	{
 		player1: {
 			type: String,
-			ref: Profile,
+			ref: 'Profile',
 			required: true,
 		},
 		player2: {
 			type: String,
-			ref: profile,
+			ref: 'Profile',
 			required: true,
 		},
 		rounds: {

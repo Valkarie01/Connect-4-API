@@ -28,7 +28,7 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // INDEX
-// GET /matches
+// GET /matchesf
 router.get('/matches', requireToken, (req, res, next) => {
 	Matches.find()
 		.then((matches) => {
@@ -59,9 +59,9 @@ router.get('/matches/:id', requireToken, (req, res, next) => {
 // POST /matches
 router.post('/matches', requireToken, (req, res, next) => {
 	// set owner of new example to be current user
-	req.body.example.owner = req.user.id
+	req.body.matches.owner = req.user.id
 
-	Matches.create(req.body.example)
+	Matches.create(req.body.matches)
 		// respond to succesful `create` with status 201 and JSON of new "example"
 		.then((matches) => {
 			res.status(201).json({ matches: matches.toObject() })
@@ -104,7 +104,7 @@ router.delete('/matches/:id', requireToken, (req, res, next) => {
 			// throw an error if current user doesn't own `example`
 			requireOwnership(req, matches)
 			// delete the example ONLY IF the above didn't throw
-			example.deleteOne()
+			matches.deleteOne()
 		})
 		// send back 204 and no content if the deletion succeeded
 		.then(() => res.sendStatus(204))
